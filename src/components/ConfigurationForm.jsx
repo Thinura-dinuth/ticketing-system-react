@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { validateConfig } from '../utils/validation';
 import FormField from './FormField';
 import PropTypes from 'prop-types';
 
 export default function ConfigurationForm({ config, onChange }) {
     const [errors, setErrors] = useState([]);
+    const navigate = useNavigate();
 
     const handleChange = (field, value) => {
         const newConfig = {
@@ -19,6 +21,11 @@ export default function ConfigurationForm({ config, onChange }) {
 
     const getError = (field) => {
         return errors.find(error => error.field === field)?.message;
+    };
+
+    const handleSave = () => {
+        onChange(config);
+        navigate('/ticket-display');
     };
 
     return (
@@ -50,7 +57,7 @@ export default function ConfigurationForm({ config, onChange }) {
                     </p>
                 </div>
             )}
-            <button className="save-button" onClick={() => onChange(config)}>
+            <button className="save-button" onClick={handleSave}>
                 Save Configuration
             </button>
         </div>

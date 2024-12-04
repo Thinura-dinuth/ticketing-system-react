@@ -1,5 +1,7 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ConfigurationForm from './components/ConfigurationForm';
+import TicketDisplay from './components/TicketDisplay';
 import { DEFAULT_CONFIG } from './constants/config';
 
 function App() {
@@ -10,11 +12,12 @@ function App() {
     };
 
     return (
-        <div className="">
-            <div className="">
-                <ConfigurationForm config={config} onChange={handleConfigChange} />
-            </div>
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={<ConfigurationForm config={config} onChange={handleConfigChange} />} />
+                <Route path="/ticket-display" element={<TicketDisplay config={config} />} />
+            </Routes>
+        </Router>
     );
 }
 
