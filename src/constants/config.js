@@ -1,6 +1,8 @@
 export const DEFAULT_CONFIG = {
-    totalTickets: 100,
-    ticketReleaseRate: 10,
-    customerRetrievalRate: 5,
-    maxTicketCapacity: 200,
+    totalTickets: 0,
+    ticketReleaseRate: 0,
+    customerRetrievalRate: 0,
+    maxTicketCapacity: 0,
+    numberOfCustomers: 0,
+    numberOfVendors: 0
 };

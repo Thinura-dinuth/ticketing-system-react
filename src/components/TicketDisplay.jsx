@@ -1,4 +1,3 @@
-// src/components/TicketDisplay.jsx
 import PropTypes from 'prop-types';
 import ControlPanel from './ControlPanel';
 import LogDisplay from './LogDisplay';
@@ -11,6 +10,8 @@ export default function TicketDisplay({ config, logs, onStart, onStop }) {
             <p>Ticket Release Rate: {config.ticketReleaseRate}</p>
             <p>Customer Retrieval Rate: {config.customerRetrievalRate}</p>
             <p>Max Ticket Capacity: {config.maxTicketCapacity}</p>
+            <p>Number of Customers: {config.numberOfCustomers}</p>
+            <p>Number of Vendors: {config.numberOfVendors}</p>
             <ControlPanel onStart={onStart} onStop={onStop}/>
             <LogDisplay logs={logs}/>
         </div>

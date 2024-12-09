@@ -29,5 +29,19 @@ export const validateConfig = (config) => {
         });
     }
 
+    if (config.numberOfCustomers <= 0) {
+        errors.push({
+            field: 'numberOfCustomers',
+            message: 'Number of customers must be greater than 0',
+        });
+    }
+
+    if (config.numberOfVendors <= 0) {
+        errors.push({
+            field: 'numberOfVendors',
+            message: 'Number of vendors must be greater than 0',
+        });
+    }
+
     return errors;
 };
