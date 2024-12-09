@@ -8,9 +8,11 @@ export default function TicketDisplay({ config, logs, onStart, onStop }) {
         <div>
             <h1>Ticket Availability</h1>
             <p>Total Tickets: {config.totalTickets}</p>
+            <p>Ticket Release Rate: {config.ticketReleaseRate}</p>
+            <p>Customer Retrieval Rate: {config.customerRetrievalRate}</p>
             <p>Max Ticket Capacity: {config.maxTicketCapacity}</p>
-            <ControlPanel onStart={onStart} onStop={onStop} />
-            <LogDisplay logs={logs} />
+            <ControlPanel onStart={onStart} onStop={onStop}/>
+            <LogDisplay logs={logs}/>
         </div>
     );
 }

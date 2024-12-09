@@ -1,9 +1,15 @@
 import PropTypes from 'prop-types';
+import { startProcess } from '../utils/startProcess';
 
 export default function ControlPanel({ onStart, onStop }) {
+    const handleStart = async () => {
+        await startProcess();
+        onStart();
+    };
+
     return (
         <div>
-            <button onClick={onStart}>Start</button>
+            <button onClick={handleStart}>Start</button>
             <button onClick={onStop}>Stop</button>
         </div>
     );

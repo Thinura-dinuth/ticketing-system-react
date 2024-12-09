@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { validateConfig } from '../utils/validation';
 import FormField from './FormField';
 import PropTypes from 'prop-types';
+import { saveConfigToFile } from '../utils/saveConfig';
 
 export default function ConfigurationForm({ config, onChange }) {
     const [errors, setErrors] = useState([]);
@@ -23,8 +24,9 @@ export default function ConfigurationForm({ config, onChange }) {
         return errors.find(error => error.field === field)?.message;
     };
 
-    const handleSave = () => {
+    const handleSave = async () => {
         onChange(config);
+        await saveConfigToFile(config);
         navigate('/ticket-display');
     };
 
