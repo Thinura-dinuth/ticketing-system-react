@@ -8,17 +8,17 @@ export const validateConfig = (config) => {
         });
     }
 
-    if (config.ticketReleaseRate <= 0 || config.ticketReleaseRate > 100) {
+    if (config.ticketReleaseRate <= 0 || config.ticketReleaseRate > 60) {
         errors.push({
             field: 'ticketReleaseRate',
-            message: 'Release rate must be between 1 and 100',
+            message: 'Release rate must be between 1 and 60',
         });
     }
 
-    if (config.customerRetrievalRate <= 0 || config.customerRetrievalRate > 100) {
+    if (config.customerRetrievalRate <= 0 || config.customerRetrievalRate > 60) {
         errors.push({
             field: 'customerRetrievalRate',
-            message: 'Retrieval rate must be between 1 and 100',
+            message: 'Retrieval rate must be between 1 and 60',
         });
     }
 

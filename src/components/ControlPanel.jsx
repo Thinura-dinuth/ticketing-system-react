@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { startProcess } from '../utils/startProcess';
+import { stopProcess } from '../utils/stopProcess';
 
 export default function ControlPanel({ onStart, onStop }) {
     const handleStart = async () => {
@@ -7,10 +8,15 @@ export default function ControlPanel({ onStart, onStop }) {
         onStart();
     };
 
+    const handleStop = async () => {
+        await stopProcess();
+        onStop();
+    };
+
     return (
         <div>
             <button onClick={handleStart}>Start</button>
-            <button onClick={onStop}>Stop</button>
+            <button onClick={handleStop}>Stop</button>
         </div>
     );
 }
