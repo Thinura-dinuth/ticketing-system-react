@@ -31,15 +31,15 @@ export default function ConfigurationForm({ config, onChange }) {
     };
 
     return (
-        <div className="">
-            <h1 className="">
+        <div className="configuration-form">
+            <h1 className="title">
                 Ticket Management System
             </h1>
-            <div className="">
-                <h2 className="">System Configuration</h2>
+            <div className="header">
+                <h2 className="subtitle">System Configuration</h2>
             </div>
 
-            <div className="">
+            <div className="form-fields">
                 {Object.entries(config).map(([key, value]) => (
                     <FormField
                         key={key}
@@ -53,8 +53,8 @@ export default function ConfigurationForm({ config, onChange }) {
             </div>
 
             {errors.length > 0 && (
-                <div className="">
-                    <p className="">
+                <div>
+                    <p className="error-text">
                         Please correct the errors before proceeding
                     </p>
                 </div>

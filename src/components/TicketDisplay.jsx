@@ -4,7 +4,7 @@ import LogDisplay from './LogDisplay';
 
 export default function TicketDisplay({ config, logs, onStart, onStop }) {
     return (
-        <div>
+        <div className="ticket-display">
             <h1>Ticket Availability</h1>
             <p>Total Tickets: {config.totalTickets}</p>
             <p>Ticket Release Rate: {config.ticketReleaseRate}</p>

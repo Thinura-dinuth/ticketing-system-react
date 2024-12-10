@@ -14,7 +14,7 @@ export default function ControlPanel({ onStart, onStop }) {
     };
 
     return (
-        <div>
+        <div className="control-panel">
             <button onClick={handleStart}>Start</button>
             <button onClick={handleStop}>Stop</button>
         </div>

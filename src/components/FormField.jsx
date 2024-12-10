@@ -5,8 +5,8 @@ export default function FormField({ name, value, onChange, error, step }) {
     const label = name.replace(/([A-Z])/g, ' $1').trim();
 
     return (
-        <div className="">
-            <label className="">
+        <div className="label-box">
+            <label className="label-name">
                 {label}
             </label>
             <div className="relative">
@@ -17,14 +17,9 @@ export default function FormField({ name, value, onChange, error, step }) {
                     min="0"
                     step={step}
                 />
-                {error && (
-                    <div className="">
-                        <AlertCircle className="" />
-                    </div>
-                )}
             </div>
             {error && (
-                <p className="">{error}</p>
+                <a className="error"><AlertCircle className="error-icon"/>{error}</a>
             )}
         </div>
     );
