@@ -10,8 +10,7 @@ This Ticket Management System is a Java-based application designed to simulate a
  * Concurrent Ticket Management: Supports multiple vendors and customers
  * Real-time Logging: WebSocket-based log streaming
  * Flexible Operations:
-     * Start/Stop system operations
-     * Add or remove tickets dynamically
+     * Start/Stop system operations   
      * Configure system parameters interactively
 
 ## Getting Started
