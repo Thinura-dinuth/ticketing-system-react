@@ -6,7 +6,6 @@ export default function LogDisplay({ logs: initialLogs }) {
     const logEndRef = useRef(null);
 
     useEffect(() => {
-        // Establish WebSocket connection
         const socket = new WebSocket('ws://localhost:8080/logs');
 
         socket.onopen = () => {
@@ -30,7 +29,6 @@ export default function LogDisplay({ logs: initialLogs }) {
         };
     }, []);
 
-    // Automatically scroll to the bottom of logs
     useEffect(() => {
         logEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [logMessages]);
