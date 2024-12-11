@@ -25,7 +25,7 @@ This Ticket Management System is a Java-based application designed to simulate a
 ### Running the Application
 
 1. Start the Spring Boot application <br/> (GithubLink- https://github.com/Thinura-dinuth/ticketing-system-backend)<br/> 
-   Instructions on how to setup the backend is given in the above link readme.md
+   Instructions - https://github.com/Thinura-dinuth/ticketing-system-backend/blob/main/README.md
    
 2. Launch the React frontend<br/>
    Install all the necassary packages to run the application package.<br/>
