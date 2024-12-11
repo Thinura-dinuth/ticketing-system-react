@@ -25,13 +25,9 @@ export default function ConfigurationForm({ config, onChange }) {
     };
 
     const handleSave = async () => {
-        const validationErrors = validateConfig(config);
-        setErrors(validationErrors);
-
-        if (validationErrors.length === 0) {
-            await saveConfigToFile(config);
-            navigate('/ticket-display');
-        }
+        onChange(config);
+        await saveConfigToFile(config);
+        navigate('/ticket-display');
     };
 
     return (
