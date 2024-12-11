@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { validateConfig } from '../utils/validation';
-import FormField from './FormField';
+import FormField from './FormField.jsx';
 import PropTypes from 'prop-types';
 import { saveConfigToFile } from '../utils/saveConfig';
 

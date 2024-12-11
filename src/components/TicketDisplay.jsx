@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import ControlPanel from './ControlPanel';
-import LogDisplay from './LogDisplay';
+import ControlPanel from './ControlPanel.jsx';
+import LogDisplay from './LogDisplay.jsx';
 
 export default function TicketDisplay({ config, logs, onStart, onStop }) {
     return (

@@ -1,8 +1,8 @@
 import './index.css';
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ConfigurationForm from './components/ConfigurationForm';
-import TicketDisplay from './components/TicketDisplay';
+import ConfigurationForm from './components/ConfigurationForm.jsx';
+import TicketDisplay from './components/TicketDisplay.jsx';
 import { DEFAULT_CONFIG } from './constants/config';
 
 function App() {
@@ -39,3 +39,5 @@ function App() {
         </Router>
     );
 }
+
+export default App;

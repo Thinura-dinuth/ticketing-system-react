@@ -6,11 +6,11 @@ body {
 }
 
 .configuration-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .ticket-display {
@@ -30,12 +30,12 @@ body {
 }
 
 .form-fields{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 16px;
 }
 
 .error-text{
@@ -43,16 +43,16 @@ body {
 }
 
 .label-box{
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  flex-direction: column;
 }
 
 .label-name{
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 input[type ="number"]{
@@ -69,7 +69,7 @@ input[type ="number"]{
   padding-right: 5px;
 }
 .error{
-    color: red;
+  color: red;
 }
 
 .config-details p {
@@ -83,13 +83,13 @@ input[type ="number"]{
 }
 
 .control-panel button{
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .log-display {
